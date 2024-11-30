@@ -1,0 +1,99 @@
+<!-- animation-name 
+animation-duration 
+animation-delay 
+animation-count 
+animation-direction 
+animation-fill-mode
+animation-play-state 
+animation-timing-function 
+animation  -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parents{
+            height: 500px;
+            width: 1000px;
+            border: 2px solid yellow;
+            margin: auto;
+            position: relative;
+        }
+        .box{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: red;
+            border: 2px solid blue;
+            margin: auto;
+            margin-top:100px;
+            animation-name:ani;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction:normal;
+            /* animation-fill-mode: ; */
+            animation-timing-function:linear;
+            /* animation-fill-mode: both; */
+            /* animation-direction: ; */
+            position: absolute;
+            top:-100px;
+            left:0px;
+            
+        }
+        .logo h1{
+            color: blue;
+            font-size: 40px;
+            margin-top:-17px;
+            animation-name: loo;
+            animation-duration: 3s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @keyframes ani{
+           0%{top:-100px;left:0px;
+        }
+        25%{
+            top:-100px;left:95%;
+            background-image: radial-gradient(red,blue,yellow);
+        }
+        50%{
+            top:75%;left:95%;
+            background-image: radial-gradient(rgb(10, 158, 67),rgb(10, 10, 10),rgb(71, 69, 87));
+        }
+        75%{
+            top:75%;left:0px;
+        }
+        100%{
+            top:0px;left:0px;
+        }
+            }
+
+@keyframes loo{
+    from{color:red}
+    to{
+        text-shadow: 0px 0px 30px red;
+        transform:rotateX(60deg);
+        perspective-origin:10px 3px;
+    }
+}
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <h1>E-Commarce</h1>
+    </div>
+    <div class="parents">
+<div class="box"></div> 
+</div>
+
+
+</body>
+</html>
